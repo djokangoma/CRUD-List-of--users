@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "kangoma",
+      "userName": "joe",
+      "email": "joekangoma@gmail.com",
+      "phone": "+243895128558"
+    },
+    {
+      "id": 2,
+      "name": "kangoma",
+      "userName": "djo",
+      "email": "djokangoma@gmail.com",
+      "phone": "+243895006558"
+    },
+    {
+      "id": 3,
+      "name": "kangoma",
+      "userName": "fils",
+      "email": "filskangoma@gmail.com",
+      "phone": "+243895128000"
+    },
+    {
+      "id": 4,
+      "name": "kangoma",
+      "userName": "joseph",
+      "email": "josephkangoma@gmail.com",
+      "phone": "+2438911280000"
+    },
+    {
+      "id": 5,
+      "name": "mananga",
+      "userName": "tim",
+      "email": "timmananga@gmail.com",
+      "phone": "+2438911280000"
+    },
+    {
+      "id": 6,
+      "name": "maswa",
+      "userName": "modestine",
+      "email": "timmananga@gmail.com",
+      "phone": "+2438911280000"
+    },
+
+    {
+      "id": 7,
+      "name": "mangangi",
+      "userName": "john",
+      "email": "johnmangangi@gmail.com",
+      "phone": "+2438911280000"
+    },
+    {
+      "id": 8,
+      "name": "mboma",
+      "userName": "nellya",
+      "email": "johnmangangi@gmail.com",
+      "phone": "+2438911280000"
+    },
+    {
+      "id": 9,
+      "name": "mitanga",
+      "userName": "dan",
+      "email": "danmitanga@gmail.com",
+      "phone": "+2438911280000"
+    },
+    {
+      "id": 10,
+      "name": "mamembo",
+      "userName": "dave",
+      "email": "davemamembo@gmail.com",
+      "phone": "+2438911280000"
+    }
+  ]
+}
