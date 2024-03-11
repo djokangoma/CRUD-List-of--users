@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Create() {
   const [formData, setFormData] = useState({
@@ -38,8 +39,10 @@ export default function Create() {
           <span style={{ color: "red" }}>{errors.tweetInput.message}</span>
         )}
       </form>
-      <button>Submit</button>
-      <button>Back</button>
+      <button>Submit</button>{" "}
+      <button>
+        <Link to="/">Back</Link>
+      </button>
     </div>
   );
 }
