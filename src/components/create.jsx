@@ -61,13 +61,21 @@ export default function Create() {
             <span style={{ color: "red" }}>{errors.inputPrenon.message}</span>
           )}
         </div>
+
         <div>
           <label htmlFor="inputEmail">Email</label>
           <input
             type="mail"
             name="inputEmail"
             placeholder="your Email"
-            {...register("inputEmail")}
+            {...register("inputEmail", {
+              required: "veillez saisir votre mail",
+              pattern: {
+                value:
+                  '/^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))/i',
+                message: "ce champs n'est pas au bon format",
+              },
+            })}
           />
           {errors.inputPrenon && (
             <span style={{ color: "red" }}>{errors.inputEmail.message}</span>
@@ -77,12 +85,18 @@ export default function Create() {
         <div>
           <label htmlFor="inputPhone">Phone</label>
           <input
-            type="telphone"
-            name="inputEmail"
+            type="tel"
+            name="inputPhone"
             placeholder="your phone number"
-            {...register("inputPhone")}
+            {...register("inputPhone", {
+              required: " please, write your phone number",
+              pattern: {
+                value: /^[0-9]{10}$/i,
+                message: "ce champ n'est pas au bon format",
+              },
+            })}
           />
-          {errors.inputPrenon && (
+          {errors.inputPhone && (
             <span style={{ color: "red" }}>{errors.inputPhone.message}</span>
           )}
         </div>
