@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 export default function Create() {
   const [formData, setFormData] = useState({
     inputName: "",
+    inputPrenon: "",
+    inputEmail: "",
+    inputPhone: "",
   });
 
   const {
@@ -23,21 +26,66 @@ export default function Create() {
     <div>
       <h1>Add a User</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="">Name</label>
-        <input
-          type="text"
-          placeholder="name"
-          name="inputName"
-          {...register("tweetInput", {
-            minLength: {
-              value: 1,
-              message: "le texte doit contenir au moins un caractere",
-            },
-          })}
-        />
-        {errors.tweetInput && (
-          <span style={{ color: "red" }}>{errors.tweetInput.message}</span>
-        )}
+        <div>
+          <label htmlFor="inputName">Name:</label>
+          <input
+            type="text"
+            placeholder=" your name"
+            name="inputName"
+            {...register("inputName", {
+              minLength: {
+                value: 3,
+                message: "le texte doit contenir au moins 3 caractere",
+              },
+            })}
+          />
+          {errors.tweetInput && (
+            <span style={{ color: "red" }}>{errors.inputName.message}</span>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="inputPrenom">Fist name:</label>
+          <input
+            type="text"
+            placeholder="your fist name"
+            name="inputPrenom"
+            {...register("inputPrenom", {
+              minLength: {
+                value: 3,
+                message: "le texte doit contenir au moins 3 caractere",
+              },
+            })}
+          />
+          {errors.inputPrenon && (
+            <span style={{ color: "red" }}>{errors.inputPrenon.message}</span>
+          )}
+        </div>
+        <div>
+          <label htmlFor="inputEmail">Email</label>
+          <input
+            type="mail"
+            name="inputEmail"
+            placeholder="your Email"
+            {...register("inputEmail")}
+          />
+          {errors.inputPrenon && (
+            <span style={{ color: "red" }}>{errors.inputEmail.message}</span>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="inputPhone">Phone</label>
+          <input
+            type="telphone"
+            name="inputEmail"
+            placeholder="your phone number"
+            {...register("inputPhone")}
+          />
+          {errors.inputPrenon && (
+            <span style={{ color: "red" }}>{errors.inputPhone.message}</span>
+          )}
+        </div>
       </form>
       <button>Submit</button>{" "}
       <button>
