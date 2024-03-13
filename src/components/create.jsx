@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import datajson from "../data/db.json";
 
 export default function Create() {
   const [formData, setFormData] = useState({
@@ -19,7 +20,15 @@ export default function Create() {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    setFormData;
+    const copyData = [...datajson];
+    const newData = {
+      name: "",
+      userName: "",
+      email: "",
+      phone: "",
+    };
+    const dataUpdate = copyData.push(newData);
+    setFormData(dataUpdate);
   };
 
   return (
