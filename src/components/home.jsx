@@ -31,7 +31,9 @@ export default function Home() {
                 <td>{item.email} </td>
                 <td>{item.phone} </td>
                 <td>
-                  <button>Read</button>
+                  <button>
+                    <Link to="./read">Read</Link>
+                  </button>
                   <button>Edit</button>
                   <button>Delete</button>
                 </td>
