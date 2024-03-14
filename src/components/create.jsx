@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -34,6 +35,7 @@ export default function Create() {
   return (
     <div>
       <h1>Add a User</h1>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="inputName">Name:</label>
@@ -110,7 +112,8 @@ export default function Create() {
           )}
         </div>
       </form>
-      <button>Submit</button>{" "}
+
+      <button>Submit</button>
       <button>
         <Link to="/">Back</Link>
       </button>

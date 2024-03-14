@@ -32,10 +32,12 @@ export default function Home() {
                 <td>{item.phone} </td>
                 <td>
                   <button>
-                    <Link to="./read">Read</Link>
+                    <Link to="./read/:id">Read</Link>
                   </button>
-                  <button>Edit</button>
-                  <button>Delete</button>
+                  <button>
+                    <Link to="/update/:id">Edit</Link>
+                  </button>
+                  <button className="">Delete</button>
                 </td>
               </tr>
             ))}

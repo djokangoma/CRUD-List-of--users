@@ -12,7 +12,7 @@ export default function Read() {
         <div>Phone</div>
       </div>
       <button>
-        <Link to="/update">Edit</Link>
+        <Link to="/update/:id">Edit</Link>
       </button>
       <button>
         {" "}

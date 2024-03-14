@@ -109,7 +109,9 @@ export default function Update() {
           )}
         </div>
       </form>
-      <button>Submit</button>{" "}
+      <button>
+        <Link>Update</Link>
+      </button>{" "}
       <button>
         <Link to="/">Back</Link>
       </button>
