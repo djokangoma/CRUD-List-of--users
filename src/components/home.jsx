@@ -2,12 +2,10 @@ import data from "../data/db.json";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  console.log("DATA :" + JSON.stringify(data));
-
   return (
     <div>
       <h1>list of users</h1>
-      <button>
+      <button className="bg-sky-500/100">
         <Link to="/create"> Add+</Link>
       </button>
       <div>

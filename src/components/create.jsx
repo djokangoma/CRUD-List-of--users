@@ -3,9 +3,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import datajson from "../data/db.json";
+import { userContext } from "../context/user-context";
+import { useContext } from "react";
 
 export default function Create() {
+  const context = useContext(userContext);
+  const { userlist, setUserlist } = context.users;
+
   const [formData, setFormData] = useState({
     inputName: "",
     inputPrenon: "",
@@ -21,15 +25,15 @@ export default function Create() {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    const copyData = [...datajson];
+    const copyData = [...userlist];
     const newData = {
-      name: "",
-      userName: "",
-      email: "",
-      phone: "",
+      name: `${data.inputName}`,
+      userName: `${data.inputPrenon}`,
+      email: `${data.inputEmail}`,
+      phone: `${data.inputPhone}`,
     };
     const dataUpdate = copyData.push(newData);
-    setFormData(dataUpdate);
+    setUserlist(dataUpdate);
   };
 
   return (
